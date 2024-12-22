@@ -1,0 +1,66 @@
+﻿course code,title,credits,alternatives,prerequisites,condition
+BUS 217W,Critical Thinking in Business,3,N/A,N/A,N/A
+BUS 272,Behaviour in Organizations,3,N/A,N/A,N/A
+CMPT 120,Introduction to Computer Science and Programming I,3,Placement Test,N/A,N/A
+CMPT 125,Introduction to Computer Science and Programming II,3,N/A,CMPT 120,N/A
+CMPT 225,Data Structures and Programming,3,N/A,CMPT 125,AND 
+CMPT 225,Data Structures and Programming,3,N/A,MACM 101,AND 
+MACM 101,Discrete Mathematics I,3,N/A,N/A,N/A
+MACM 201,Discrete Mathematics II,3,N/A,MACM 101,OR
+MACM 201,Discrete Mathematics II,3,N/A,ENSC 251,AND 
+MACM 201,Discrete Mathematics II,3,N/A,MATH 232,OR
+MACM 201,Discrete Mathematics II,3,N/A,MATH 240,OR
+DATA 180,Undergraduate Seminar in Data Science,1,N/A,N/A,N/A
+MATH 150,Calculus I with Review,4,MATH 151; MATH 154; MATH 157,MATH 100,N/A
+MATH 152,Calculus II,3,N/A,MATH 150,OR
+MATH 152,Calculus II,3,N/A,MATH 151,OR
+MATH 152,Calculus II,3,N/A,MATH 155,OR
+MATH 152,Calculus II,3,N/A,MATH 154,OR
+MATH 152,Calculus II,3,N/A,MATH 157,OR
+MATH 232,Applied Linear Algebra,3,MATH 240,MATH 150,OR
+MATH 232,Applied Linear Algebra,3,MATH 240,MATH 151,OR
+MATH 232,Applied Linear Algebra,3,MATH 240,MACM 101,OR
+MATH 208W,Introduction to Operations Research,3,MACM 203,MATH 150,OR
+MATH 208W,Introduction to Operations Research,3,MACM 203,MATH 151,OR
+MATH 208W,Introduction to Operations Research,3,MACM 203,MATH 154,OR
+MATH 208W,Introduction to Operations Research,3,MACM 203,MATH 157,OR
+STAT 240,Introduction to Data Science,3,N/A,STAT 201,OR
+STAT 240,Introduction to Data Science,3,N/A,STAT 203,OR
+STAT 240,Introduction to Data Science,3,N/A,STAT 205,OR
+STAT 240,Introduction to Data Science,3,N/A,STAT 270,OR
+STAT 240,Introduction to Data Science,3,N/A,BUS 232,OR
+STAT 240,Introduction to Data Science,3,N/A,ECON 233,AND 
+STAT 240,Introduction to Data Science,3,N/A,CMPT 120,OR
+STAT 240,Introduction to Data Science,3,N/A,CMPT 125,OR
+STAT 260,Introductory R for Data Science,3,N/A,STAT 201,OR
+STAT 260,Introductory R for Data Science,3,N/A,STAT 203,OR
+STAT 260,Introductory R for Data Science,3,N/A,STAT 205,OR
+STAT 260,Introductory R for Data Science,3,N/A,STAT 270,OR
+STAT 260,Introductory R for Data Science,3,N/A,BUS 232,OR
+STAT 260,Introductory R for Data Science,3,N/A,ECON 233,OR
+STAT 270,Introduction to Probability and Statistics ,3,BUS 232; STAT 201; STAT 203; STAT 205,MATH 152,N/A
+BUS 343,Introduction to Marketing,3,N/A,45 UNITS,N/A
+BUS 360W,Business Communication,4,N/A,BUS 217W,N/A
+BUS 439,Analytics Project,3,N/A,BUS 360W,OR
+BUS 439,Analytics Project,3,N/A,BUS 445,OR
+BUS 439,Analytics Project,3,N/A,CMPT 354,OR
+BUS 445,Customer Analytics,3,N/A,BUS 343,OR
+BUS 445,Customer Analytics,3,N/A,BUS 360W,OR
+CMPT 307,Data Structures and Algorithms,3,N/A,CMPT 225,AND 
+CMPT 307,Data Structures and Algorithms,3,N/A,MATH 151,AND 
+CMPT 307,Data Structures and Algorithms,3,N/A,MATH 232,AND 
+CMPT 310,Introduction to Artificial Intelligence,3,N/A,CMPT 225,AND 
+CMPT 310,Introduction to Artificial Intelligence,3,N/A,MACM 101,AND 
+CMPT 353,Computational Data Science,3,N/A,CMPT 225,AND 
+CMPT 353,Computational Data Science,3,N/A,STAT 270,AND 
+CMPT 354,Database Systems I,3,N/A,CMPT 225,AND 
+CMPT 354,Database Systems I,3,N/A,MACM 101,AND 
+MATH 308,Linear Optimization,3,MATH 309,MATH 151,AND 
+MATH 308,Linear Optimization,3,MATH 309,MATH 232,AND 
+STAT 302,Analysis of Experimental and Observational Data,3,ECON 333; STAT 305; STAT 350,STAT 270,N/A
+STAT 403,Intermediate Sampling and Experimental Design,3,N/A,STAT 260,AND 
+STAT 403,Intermediate Sampling and Experimental Design,3,N/A,STAT 302,AND 
+STAT 452,Statistical Learning and Prediciton,3,N/A,STAT 260,AND 
+STAT 452,Statistical Learning and Prediciton,3,N/A,STAT 302,AND 
+STAT 445,Applied Multivariate Analysis ,3,STAT 475; STAT 485,STAT 260,AND 
+STAT 445,Applied Multivariate Analysis ,3,STAT 475; STAT 486,STAT 302,AND 
