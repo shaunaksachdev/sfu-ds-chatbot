@@ -1,4 +1,4 @@
-# Course Chatbot
+# SFU Data Science Course Chatbot
 
 This is a chatbot that provides information about university courses, such as prerequisites, alternatives, credits, and more. The chatbot interacts with users to answer queries about specific courses and returns relevant information from a dataset.
 
