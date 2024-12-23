@@ -1,0 +1,92 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SFU Data Science Course Chatbot</title>
+  <!-- Bootstrap (optional) - helps with certain layout niceties -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dark-mode">
+  <div class="chat-container">
+    <div class="chat-window" id="chat-window">
+      <!-- Chat messages will go here -->
+    </div>
+
+    <div class="chat-input-bar">
+      <input
+        type="text"
+        id="user-input"
+        class="chat-input"
+        placeholder="Ask about SFU courses..."
+      />
+      <button id="send-btn" class="send-button">Send</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const chatWindow = document.getElementById("chat-window");
+    const userInput = document.getElementById("user-input");
+    const sendBtn = document.getElementById("send-btn");
+
+    // Helper to append messages
+    function appendMessage(sender, message) {
+      const messageWrapper = document.createElement("div");
+      messageWrapper.classList.add("message-wrapper", sender);
+
+      const messageBubble = document.createElement("div");
+      messageBubble.classList.add("message-bubble");
+      messageBubble.textContent = message;
+
+      messageWrapper.appendChild(messageBubble);
+      chatWindow.appendChild(messageWrapper);
+
+      // Auto-scroll
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+    }
+
+    // Send button click
+    sendBtn.addEventListener("click", () => {
+      const query = userInput.value.trim();
+      if (!query) return;
+
+      // Show user message
+      appendMessage("user", query);
+
+      // Send to Flask
+      fetch("/ask", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ query: query }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          const botResponse = data.response;
+          appendMessage("bot", botResponse);
+        })
+        .catch((err) => {
+          console.error("Error:", err);
+          appendMessage("bot", "Oops! Something went wrong. Please try again.");
+        });
+
+      // Clear input
+      userInput.value = "";
+    });
+
+    // Press "Enter" to send
+    userInput.addEventListener("keyup", (event) => {
+      if (event.key === "Enter") {
+        sendBtn.click();
+      }
+    });
+  </script>
+</body>
+</html>
